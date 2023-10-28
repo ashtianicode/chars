@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.118.2">
+    <meta charset="utf-8">
+<title>Code golf — Toronto 2023</title>
+<meta name="description" content="Saturday event">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/reveal-js/dist/reset.css">
+<link rel="stylesheet" href="/reveal-js/dist/reveal.css"><link rel="stylesheet" href="/reveal-hugo/themes/sunblind.css" id="theme"><link rel="stylesheet" href="/highlight-js/default.min.css">
+  </head>
+  <body>
+    
+    <div class="reveal">
+      <div class="slides">
+  
+
+    
+<section data-noprocess data-shortcode-slide
+    data-background="#5"
+    data-transition="slide-in fade-out"
+    data-template="minimal"
+      id="welcome">
+  
+<h1 id="heading">🔨🪆🐞🪞🏌️</h1>
+<h1 id="code-golf-0x001">Code Golf 0X001</h1>
+<h3 id="toronto-middot-oct-28-2023">Toronto · Oct 28, 2023</h3>
+<p>~ <a href="http://tahaashtiani.com/work/">Taha</a></p>
+<p>(Thanks Effective Altruism Canada for the room)</p>
+</section><section>
+<h4 id="-plan-for-today">📌 Plan for today:</h4>
+<p>🔌 First, setup your machine and get ready!</p>
+<p>🧪 Then we solve 3 problems (starting ~ 2:30pm)</p>
+<p><strong>🔧 Problem #1:</strong> A warm up, and getting in the zone (Until 3:30pm)</p>
+<p>⛽️ Present your code and discuss solutions together (Until 4:00pm)</p>
+<p><strong>🔧 Problem #2:</strong> More algorithmic and open ended one (Until 4:45pm)</p>
+<p><strong>⛵️ Problem #3:</strong> Most likely no problem 3 for today, to make this first event more chill.</p>
+</section><section>
+<h4 id="-having-fun--killing-the-fun">🐞 Having Fun &gt; killing the fun:</h4>
+<ul>
+<li>There will be one and only one <strong>winner</strong>!</li>
+<li>Shortest code wins.</li>
+<li>Some forms of cheating are sometimes fun (Subject to interpretation, decide for yourself).</li>
+<li>Looking up the answer on the forums kills the fun.</li>
+<li>Pasting your program in chatgpt to translate to Esolangs is not fun.</li>
+<li>But, <strong>Esolangs are allowed</strong> &ndash; if you know one.</li>
+<li>Playing 3D chess by tricking other competitors into losing might be fun. But avoid this if possible.</li>
+<li>Taking ideas from others and using them in your own program is very fun.</li>
+</ul>
+</section><section>
+<h4 id="criteria">Criteria</h4>
+<ul>
+<li>
+<p>You can&rsquo;t store your program in a file. It should run in terminal like this:
+$ python -c &ldquo;import this; something something;&rdquo;</p>
+</li>
+<li>
+<p>If you need to, you can only import standard libraries of your language.</p>
+</li>
+</ul>
+</section><section>
+<h4 id="problem-1">Problem #1</h4>
+<p>Swap contents of two files:</p>
+<p><code>[ i.txt, o.txt]</code></p>
+<ul>
+<li>
+<p>Rules:</p>
+</li>
+<li>
+<p>You can create a third file if it helps, but your program needs to delete it after swapping is done.</p>
+</li>
+<li>
+<p>Renaming files is allowed.</p>
+</li>
+</ul>
+</section><section>
+<h4 id="problem-2">Problem #2</h4>
+<p>Flatten an arbitrarily deep nested list.</p>
+<p>For example:</p>
+<p><code>[10,20,[30,[40,&quot;hi&quot;],&quot;oh&quot;],50]</code></p>
+<p>should output</p>
+<p><code>[10, 20, 30, 40, 'hi', 'oh', 50]</code></p>
+<p>The list must be read from a file named:</p>
+<p><code>l.txt</code></p>
+<p>Test Cases:</p>
+<pre tabindex="0"><code>[10,20,30] -&gt; [10,20,30]
+[[10]] -&gt; [10]
+[[&#34;Hi&#34;],[[10]]] -&gt; [&#34;Hi&#34;,10]
+[[[20],[&#34;Hi&#34;],&#34;Hi&#34;,20]] -&gt; [20,&#34;Hi&#34;,&#34;Hi&#34;,20]
+[[[&#34;[]&#34;],&#34;[]&#34;]] -&gt; [&#34;[]&#34;,&#34;[]&#34;]
+</code></pre><p>Download test cases pasted on <a href="https://tahaashtiani.com/codegolf">https://tahaashtiani.com/codegolf</a></p>
+</section><section>
+<h4 id="happy-hacking">Happy Hacking!</h4>
+<p>Stay tuned for next event <strong>0X002</strong>, hopefully at this room:</p>
+<p><img src="./Photo_7.jpg" alt="Image"></p>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/reveal-hugo/object-assign.js></script>
+
+
+<script src="/reveal-js/dist/reveal.js"></script>
+
+
+  <script type="text/javascript" src="/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/zoom/zoom.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/notes/notes.js"></script>
+  
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = {"margin":0.2,"slide_number":true,"templates":{"blue":{"background":"#a5e2fd","transition":"slide-in fade-out"},"minimal":{"background":"#5","transition":"slide-in fade-out"},"yellow":{"background":"#f6f195","transition":"slide-in fade-out"}},"transition":"slide","transition_speed":"fast"};
+  var revealHugoPageParams = {"custom_theme":"reveal-hugo/themes/sunblind.css"};
+
+  var revealHugoPlugins = {
+    
+    plugins: [RevealMarkdown,RevealHighlight,RevealZoom,RevealNotes]
+  };
+
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams),
+    camelize(revealHugoPlugins));
+
+  Reveal.initialize(options);
+</script>
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+    
+    
+  </body>
+</html>
